@@ -56,6 +56,11 @@
       "id": 3,
       "email": "pastas@pastas.lt",
       "password": "789"
+    },
+    {
+      "id": "a4e18e33-aa18-4030-9fc0-08bd6d3d6a92",
+      "email": "test@test.lt",
+      "password": "123"
     }
   ]
 }

@@ -32,16 +32,22 @@ const Register = () => {
       const passwordIsMatching = values.password === values.passwordConfirm;
       if (isExisting) {
         createErrorMsg('User with this e-mail already exists!');
+        return;
       } else if (!passwordIsMatching) {
         createErrorMsg("Passwords don't match!");
+        return;
       }
 
       const newUser = {
         id: generatedId(),
         email: values.email,
         password: values.password,
-      }
+      };
 
+      dispatchUsers({
+        type: USERS_ACTIONS.ADD,
+        user: newUser,
+      });
       navigate('/');
     }
   });
