@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "agne.martinaityte@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "email": "user@email.com",
+      "password": "456"
+    },
+    {
+      "id": 3,
+      "email": "pastas@pastas.lt",
+      "password": "789"
+    }
+  ]
+}

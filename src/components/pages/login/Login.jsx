@@ -3,21 +3,33 @@ import Input from "../../UI/input/Input";
 import StyledLogin from "./login.styles";
 
 const Login = () => {
+  const initialValues = {
+    email: '',
+    password: '',
+  };
+
+  const formik = useFormik({
+    initialValues,
+    onSubmit: (values) => {
+      console.log(values)
+    }
+  });
+
   return (
     <StyledLogin>
       <h1>Log In</h1>
-      <form>
+      <form onSubmit={formik.handleSubmit}>
         <Input
           id="email"
           type="email"
           label="Email"
-        // {...formik.getFieldProps('email')}
+          {...formik.getFieldProps('email')}
         />
         <Input
           id="password"
           type="password"
           label="Password"
-        // {...formik.getFieldProps('password')}
+          {...formik.getFieldProps('password')}
         />
         <Input
           type="submit"
