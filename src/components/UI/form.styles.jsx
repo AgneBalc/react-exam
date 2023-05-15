@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const StyledForm = styled.main`
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding: 2rem 0;
     >h1 {
       letter-spacing: 1px;
       text-align: center;
