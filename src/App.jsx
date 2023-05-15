@@ -6,6 +6,7 @@ import Home from './components/pages/home/Home';
 import { useContext } from 'react';
 import UsersContext from './contexts/users-context';
 import Register from './components/pages/Register';
+import AddPost from './components/pages/addPost/AddPost';
 
 const App = () => {
   const { users: { isLoggedIn } } = useContext(UsersContext);
@@ -19,6 +20,7 @@ const App = () => {
           <Route index element={<Login />} />
         }
         <Route path='/register' element={<Register />} />
+        <Route path='/add' element={<AddPost />} />
       </Routes>
     </>
   );
