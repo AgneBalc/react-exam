@@ -10,7 +10,15 @@ const StyledNavbar = styled.nav`
       padding: 0.25rem 0.5rem;
       border-radius: 5px;
       &:hover {
-        border: 1px solid #0ad9fe;
+          border: 1px solid #0ad9fe;
+      }
+      >a {
+        text-decoration: none;
+        color: #000;
+        &.active {
+          color: #0799b3;
+          font-weight: 600;
+        }
       }
     }
   }

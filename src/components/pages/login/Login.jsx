@@ -39,7 +39,7 @@ const Login = () => {
         dispatchUsers({
           type: USERS_ACTIONS.LOGIN
         });
-        navigate('/home');
+        navigate('/');
       }
     }
   });
