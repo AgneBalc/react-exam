@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const StyledInput = styled.div`
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
   >label {
-  font-size: 13px;
   font-weight: 700;
-  padding-bottom: 2px;
 }
 >input:not(input[type='submit']) {
   height: 2rem;
@@ -15,9 +16,17 @@ const StyledInput = styled.div`
 >input[type='submit'] {
   background-color: #019eb7;
   border: none;
-  font-size: 13px;
-  height: 29px;
+  font-size: 14px;
   border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: center;
+  letter-spacing: 0.5px;
+}
+>input[type='submit']:hover {
+  border: 2px solid #019eb7;
+  background-color: #fff;
 }
 `;
 
