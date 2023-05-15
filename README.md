@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 Installs all the dependencies.
 
-### `cd src`
+### `cd react-exam/src`
 
 Navigate to src folder which contains data.json file which is needed to start json server.
 
