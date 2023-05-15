@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 const StyledHeader = styled.header`
   height: 70px;
-  border-bottom: 1px solid black;
+  box-shadow: 0px 3px 6px 1px rgb(229, 231, 235);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  z-index: 9;
   >img {
-    height: 100%;
+    height: 50px;
   }
 `;
 
