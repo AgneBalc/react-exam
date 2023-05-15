@@ -4,7 +4,7 @@ import Navbar from "../UI/navbar/Navbar";
 const Header = () => {
   return (
     <StyledHeader>
-      <img src="https://www.pngplay.com/wp-content/uploads/6/Exam-Transparent-Background.png" alt="logo" />
+      <img src="https://logos-download.com/wp-content/uploads/2016/09/React_logo_wordmark.png" alt="logo" />
       <Navbar />
     </StyledHeader>
   );

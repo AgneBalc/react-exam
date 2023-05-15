@@ -14,7 +14,7 @@ gap: 0.5rem;
   border-radius: 3px;
 }
 >input[type='submit'] {
-  background-color: #019eb7;
+  background-color: #0ad9fe;
   border: none;
   font-size: 14px;
   border-radius: 0.5rem;
@@ -25,7 +25,7 @@ gap: 0.5rem;
   letter-spacing: 0.5px;
 }
 >input[type='submit']:hover {
-  border: 2px solid #019eb7;
+  border: 2px solid #0ad9fe;
   background-color: #fff;
 }
 `;
