@@ -18,6 +18,9 @@ const StyledHome = styled.main`
     margin-top: 3rem;
     display: grid;
     gap: 1.25rem;
+    >h2 {
+      text-align: center;
+    }
   }
 `;
 
