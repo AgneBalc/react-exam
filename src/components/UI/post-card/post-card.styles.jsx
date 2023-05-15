@@ -13,6 +13,7 @@ const StyledCard = styled.div`
     padding: 1.5rem 0;
     line-height: 1.7;
     color: rgb(64, 71, 86);
+    word-break: break-all;
   }
 `;
 

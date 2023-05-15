@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/Header';
 import Login from './components/pages/Login';
@@ -16,12 +16,22 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        {isLoggedIn ?
-          <Route index element={<Home />} /> :
-          <Route index element={<Login />} />
-        }
-        <Route path='/register' element={<Register />} />
-        <Route path='/add' element={<AddPost />} />
+        <Route
+          index
+          element={isLoggedIn ? <Home /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/login'
+          element={!isLoggedIn ? <Login /> : <Navigate to='/' />}
+        />
+        <Route
+          path='/register'
+          element={!isLoggedIn ? <Register /> : <Navigate to='/' />}
+        />
+        <Route
+          path='/add'
+          element={isLoggedIn ? <AddPost /> : <Navigate to='/login' />}
+        />
       </Routes>
       <Footer />
     </>

@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   padding: 0.5rem 1rem;
   z-index: 9;
-  >img {
+  img {
     height: 50px;
   }
 `;
