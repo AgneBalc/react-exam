@@ -1,10 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/Header';
-import Login from './components/pages/login/Login';
+import Login from './components/pages/Login';
 import Home from './components/pages/home/Home';
 import { useContext } from 'react';
 import UsersContext from './contexts/users-context';
+import Register from './components/pages/Register';
 
 const App = () => {
   const { users: { isLoggedIn } } = useContext(UsersContext);
@@ -17,6 +18,7 @@ const App = () => {
           <Route index element={<Home />} /> :
           <Route index element={<Login />} />
         }
+        <Route path='/register' element={<Register />} />
       </Routes>
     </>
   );

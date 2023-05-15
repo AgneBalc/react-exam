@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledLogin = styled.main`
+const StyledForm = styled.main`
   margin: 2rem auto;
     >h1 {
       letter-spacing: 1px;
@@ -22,4 +22,4 @@ const StyledLogin = styled.main`
     }
 `;
 
-export default StyledLogin;
+export default StyledForm;
