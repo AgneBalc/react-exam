@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledHome = styled.main`
-  max-width: 900px;
+  max-width: 992px;
   margin: 2rem auto;
   .home-header {
     >h1 {
