@@ -1,22 +1,23 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import PostCard from "../../UI/post-card/PostCard";
 import StyledHome from "./home.styles";
 import PostsContext from "../../../contexts/posts-context";
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const { posts } = useContext(PostsContext);
+  const { posts, isLoading } = useContext(PostsContext);
 
-  let content = <h2>Found no posts.</h2>;
-  if (posts.length > 0) {
+  let content;
+  if (isLoading) {
+    content = <h2>Loading...</h2>;
+  } else if (posts.length > 0) {
     content = posts.map(post =>
       <PostCard
         key={post.id}
         post={post}
       />
     )
-  } else if (isLoading) {
-    content = <h2>Loading...</h2>;
+  } else {
+    content = <h2>No posts found.</h2>;
   }
 
   return (

@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 
 const PostsContext = createContext();
 
@@ -25,14 +25,18 @@ const postsReducer = (state, action) => {
 
 const PostsProvider = ({ children }) => {
   const [posts, dispatchPosts] = useReducer(postsReducer, []);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch('http://localhost:8080/posts')
       .then(res => res.json())
-      .then(data => dispatchPosts({
-        type: POSTS_ACTIONS.GET,
-        data,
-      }));
+      .then(data => {
+        dispatchPosts({
+          type: POSTS_ACTIONS.GET,
+          data,
+        });
+        setIsLoading(false);
+      })
   }, []);
 
   return (
@@ -40,6 +44,7 @@ const PostsProvider = ({ children }) => {
       value={{
         posts,
         dispatchPosts,
+        isLoading,
       }}
     >
       {children}
